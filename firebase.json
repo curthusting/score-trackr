@@ -1,0 +1,9 @@
+{
+  "firebase": "score-trackr",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
