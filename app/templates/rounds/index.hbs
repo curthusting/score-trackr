@@ -1,0 +1,5 @@
+<h1>Rounds list</h1>
+{{#each model as |round|}}
+  {{#link-to 'rounds.edit' round.id}}{{round.created}}{{/link-to}}<br>
+{{/each}}
+<button {{action 'createRound'}}>New Round</button>
