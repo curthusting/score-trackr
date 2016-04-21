@@ -18,7 +18,7 @@ export default Ember.Route.extend({
       round.set('created', moment());
       round.save().then(function (round) {
         self.transitionTo('rounds.edit', round.get('id'));
-      })
+      });
     }
   }
 });

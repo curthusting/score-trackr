@@ -9,6 +9,8 @@
   {{#link-to 'rounds.edit' 12345}}Edit{{/link-to}}
   {{outlet}}
 {{else}}
+  <button {{action "signIn"}}>Sign in</button>
+  <button {{action "social" "facebook"}}>Sign in with Facebook</button>
   {{!-- <button {{action "signIn" "facebook"}}>Sign in with Facebook</button> --}}
 {{/if}}
 

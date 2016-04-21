@@ -18,17 +18,20 @@ export default Ember.Route.extend({
     //     }
     //   });
     // };
-
-    this.get('session').open('firebase', {
-      provider: 'password',
-      email: 'test@example.com',
-      password: 'password1234'
-    });
     return this.get("session").fetch().catch(function () {});
   },
   afterModel: function () {},
   actions: {
     signIn: function (provider) {
+      this.get("session").open("firebase", {
+        provider: "password",
+        email: 'test@example.com',
+        password: 'password1234'
+      }).then(function (data) {
+        console.log(data.currentUser, provider);
+      });
+    },
+    social: function (provider) {
       this.get("session").open("firebase", {
         provider: provider
       }).then(function (data) {

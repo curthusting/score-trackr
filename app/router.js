@@ -9,12 +9,12 @@ Router.map(function () {
   this.route('people', function () {
     this.route('edit', {
       path: '/edit/:id'
-    })
+    });
   });
   this.route('rounds', function () {
     this.route('edit', {
       path: '/edit/:id'
-    })
+    });
   });
   this.route('courses', function () {
     this.route('edit', {
